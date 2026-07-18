@@ -6,14 +6,11 @@ interface ContainerProps {
   className?: string;
 }
 
-export default function Container({
-  children,
-  className,
-}: ContainerProps) {
+export default function Container({ children, className }: ContainerProps) {
   return (
     <div
       className={cn(
-        "mx-auto w-full max-w-7xl px-6 lg:px-8",
+        "mx-auto w-full max-w-container-max px-gutter",
         className
       )}
     >
