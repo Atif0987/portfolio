@@ -33,9 +33,9 @@
   --font-label-sm: var(--font-jetbrains-mono), ui-monospace, monospace;
   --font-code-snippet: var(--font-jetbrains-mono), ui-monospace, monospace;
 
-  --spacing-gutter: 24px;
-  --spacing-section-padding-md: 80px;
-  --spacing-section-padding-lg: 120px;
+  --spacing-gutter: 12px;
+  --spacing-section-padding-md: 40px;
+  --spacing-section-padding-lg: 60px;
 
   --container-container-max: 1280px;
 
@@ -149,4 +149,24 @@ body {
 .slider-dot.active {
   background-color: #2563eb;
   width: 1.5rem;
+}
+
+/* ── Scroll Fade-in Animations ─────────────────────────── */
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms ease-out, transform 600ms ease-out;
+}
+
+.scroll-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

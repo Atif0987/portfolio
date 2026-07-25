@@ -1,10 +1,19 @@
+"use client";
+
+import type { RefObject } from "react";
+import { useScrollFadeIn } from "../../hooks/useScrollFadeIn";
 import { processSteps } from "../../data/process";
 import Container from "../shared/container";
 import MaterialIcon from "../ui/material-icon";
 
 export default function ProcessSection() {
+  const { ref, isVisible } = useScrollFadeIn();
+
   return (
-    <section className="relative overflow-hidden bg-black py-section-padding-lg">
+    <section
+      ref={ref as RefObject<HTMLElement>}
+      className={`scroll-fade-in ${isVisible ? "visible" : ""} relative overflow-hidden bg-black py-section-padding-lg`}
+    >
       <Container className="relative z-10">
         <div className="mb-16 text-center">
           <h2 className="mb-4 font-display-lg text-4xl text-white">

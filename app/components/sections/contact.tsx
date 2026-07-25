@@ -1,14 +1,26 @@
+"use client";
+
+import React from "react";
 import Link from "next/link";
 
 import { siteConfig } from "../../data/site";
+import { useScrollFadeIn } from "../../hooks/useScrollFadeIn";
 import Container from "../shared/container";
 import MaterialIcon from "../ui/material-icon";
 
 export default function ContactSection() {
+  const { ref, isVisible } = useScrollFadeIn();
+
+  const bookingUrl = siteConfig.calendly || siteConfig.linkedin;
+
   return (
-    <section id="contact" className="py-section-padding-lg">
+    <section
+      ref={ref as React.RefObject<HTMLElement>}
+      id="contact"
+      className={`scroll-fade-in ${isVisible ? "visible" : ""} py-section-padding-lg`}
+    >
       <Container>
-        <div className="premium-shadow flex flex-col items-center gap-12 rounded-xl border border-outline-variant/10 bg-surface-container-lowest p-12 text-center md:flex-row md:text-left">
+        <div className="premium-shadow flex flex-col items-center gap-12 rounded-xl border border-outline-variant/10 bg-surface-container-lowest p-8 text-center md:flex-row md:p-12 md:text-left">
           <div className="flex-1">
             <h2 className="mb-4 font-display-lg text-4xl text-white">
               Let&apos;s build something extraordinary.
@@ -27,7 +39,7 @@ export default function ContactSection() {
                 Send Email
               </Link>
               <Link
-                href={siteConfig.linkedin}
+                href={bookingUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-outline-variant px-8 py-4 font-label-sm text-sm text-white transition-all hover:bg-surface-container"

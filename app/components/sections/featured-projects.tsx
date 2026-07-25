@@ -1,8 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import type { RefObject } from "react";
 import Image from "next/image";
 
+import { useScrollFadeIn } from "../../hooks/useScrollFadeIn";
 import { projects, type Project } from "../../data/projects";
 import Container from "../shared/container";
 import MaterialIcon from "../ui/material-icon";
@@ -106,6 +108,7 @@ function ProjectCard({ project }: { project: Project }) {
 }
 
 export default function FeaturedProjects() {
+  const { ref, isVisible } = useScrollFadeIn();
   const sliderRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -159,8 +162,9 @@ export default function FeaturedProjects() {
 
   return (
     <section
+      ref={ref as RefObject<HTMLElement>}
       id="projects"
-      className="bg-surface-container-lowest py-section-padding-lg"
+      className={`scroll-fade-in ${isVisible ? "visible" : ""} bg-surface-container-lowest py-section-padding-lg`}
     >
       <Container>
         <div className="mb-16 flex items-end justify-between">

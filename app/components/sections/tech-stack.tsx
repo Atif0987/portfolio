@@ -1,10 +1,20 @@
+"use client";
+
+import type { RefObject } from "react";
 import { skills } from "../../data/skills";
+import { useScrollFadeIn } from "../../hooks/useScrollFadeIn";
 import Container from "../shared/container";
 import MaterialIcon from "../ui/material-icon";
 
 export default function TechStack() {
+  const { ref, isVisible } = useScrollFadeIn();
+
   return (
-    <section id="skills" className="py-section-padding-lg">
+    <section
+      ref={ref as RefObject<HTMLElement>}
+      id="skills"
+      className={`scroll-fade-in ${isVisible ? "visible" : ""} py-section-padding-lg`}
+    >
       <Container>
         <div className="mb-16 text-center">
           <h2 className="mb-4 font-display-lg text-4xl text-white">

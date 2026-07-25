@@ -1,9 +1,19 @@
+"use client";
+
+import type { RefObject } from "react";
 import { experience } from "../../data/experience";
+import { useScrollFadeIn } from "../../hooks/useScrollFadeIn";
 import Container from "../shared/container";
 
 export default function ExperienceSection() {
+  const { ref, isVisible } = useScrollFadeIn();
+
   return (
-    <section id="experience" className="py-section-padding-lg">
+    <section
+      id="experience"
+      ref={ref as RefObject<HTMLElement>}
+      className={`scroll-fade-in ${isVisible ? "visible" : ""} py-section-padding-lg`}
+    >
       <Container>
         <div className="grid gap-12 md:grid-cols-3">
           <div className="md:col-span-1">

@@ -23,7 +23,7 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="mb-6 font-display-lg text-5xl leading-[1.1] tracking-tight text-white md:text-6xl">
+          <h1 className="mb-6 font-display-lg text-2xl leading-[1.1] tracking-tight text-white md:text-6xl">
             Shopify Plus Engineer. Building Scalable eCommerce Experiences.
           </h1>
 
@@ -42,12 +42,13 @@ export default function Hero() {
               View Projects
               <MaterialIcon name="arrow_forward" />
             </Link>
-
             <Link
               href={siteConfig.resume}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full border border-outline-variant px-8 py-4 font-label-sm text-sm text-white transition-all hover:bg-surface-container"
             >
-              Download Resume
+              View Resume
             </Link>
           </div>
         </div>
@@ -55,7 +56,7 @@ export default function Hero() {
         <div className="fade-in delay-2 relative flex justify-center">
           <div className="absolute -z-10 h-[140%] w-[140%] rounded-full bg-gradient-to-br from-primary/10 to-transparent opacity-30 blur-3xl" />
           <Image
-            src={siteConfig.heroImage}
+            src={siteConfig.sectionheroImage}
             alt="Atif Raza - Shopify Plus Engineer"
             width={512}
             height={512}

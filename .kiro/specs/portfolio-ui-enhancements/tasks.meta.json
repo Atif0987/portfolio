@@ -1,0 +1,330 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Add `calendly: \"\"` field to `siteConfig` in `app/data/site.ts`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784405816305
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784405830278
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406070504
+      }
+    ],
+    "1.2 Replace `string[]` clients with typed `Client[]` array in `app/data/clients.ts`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784405816572
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784405830878
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406072538
+      }
+    ],
+    "2.1 Create `app/hooks/useScrollFadeIn.ts`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784405816978
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406081694
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406347556
+      }
+    ],
+    "2.3 Add scroll animation CSS classes to `app/globals.css`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784405817367
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406082952
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406348618
+      }
+    ],
+    "3.1 Add `isMobileMenuOpen` state and `HamburgerButton` to `app/components/layout/navbar.tsx`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784405817646
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406084174
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406349952
+      }
+    ],
+    "3.2 Add `MobileMenu` panel to `app/components/layout/navbar.tsx`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784405817907
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406367004
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406485192
+      }
+    ],
+    "3.3 Add Escape key, viewport resize, and body scroll-lock effects to `app/components/layout/navbar.tsx`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784405818127
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406521565
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406853402
+      }
+    ],
+    "4.1 Update `ClientList` in `app/components/sections/clients-marquee.tsx`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784405818345
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406085930
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406350978
+      }
+    ],
+    "5. Checkpoint — foundation and shared utilities complete": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784405818584
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406966310
+      }
+    ],
+    "6.1 Update `app/components/sections/contact.tsx` with `useScrollFadeIn`, Calendly fallback, and mobile padding": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784405818885
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406522295
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406854469
+      }
+    ],
+    "7.1 Update `app/components/sections/impact-stats.tsx`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784405819269
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406523060
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406855272
+      }
+    ],
+    "8.1 Update `app/components/sections/tech-stack.tsx`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784405819484
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406523696
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406856700
+      }
+    ],
+    "9.1 Update `app/components/sections/featured-projects.tsx`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784405819794
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406524461
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406856925
+      }
+    ],
+    "10.1 Update `app/components/sections/experience.tsx`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784405820026
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406864504
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406957886
+      }
+    ],
+    "11.1 Update `app/components/sections/process.tsx`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784405820395
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406866477
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406958333
+      }
+    ],
+    "12. Final checkpoint — all enhancements complete": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784405820764
+      },
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406968299
+      }
+    ],
+    "2. Create `useScrollFadeIn` hook and CSS animation classes": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406350568
+      }
+    ],
+    "4. Update ClientsMarquee to render typed `Client` objects": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406351464
+      }
+    ],
+    "3. Mobile Navigation Menu": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406853864
+      }
+    ],
+    "6. Add scroll animations to `ContactSection`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406854960
+      }
+    ],
+    "7. Add scroll animations to `ImpactStats`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406856260
+      }
+    ],
+    "8. Add scroll animations to `TechStack`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406857215
+      }
+    ],
+    "9. Add scroll animations to `FeaturedProjects`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406857590
+      }
+    ],
+    "10. Add scroll animations to `ExperienceSection`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406958617
+      }
+    ],
+    "11. Add scroll animations to `ProcessSection`": [
+      {
+        "executionId": "dfb2b620-0274-426d-b4e6-440fc8a1b21f",
+        "chatSessionId": "sess_3e9834b5-9a6c-4020-a9d2-cd1be90e32d4",
+        "timestamp": 1784406959360
+      }
+    ]
+  }
+}

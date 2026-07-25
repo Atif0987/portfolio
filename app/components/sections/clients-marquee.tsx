@@ -5,12 +5,15 @@ function ClientList() {
   return (
     <>
       {clients.map((client) => (
-        <span
-          key={client}
+        <a
+          key={client.url}
+          href={client.url}
+          target="_blank"
+          rel="noopener noreferrer"
           className="whitespace-nowrap font-display-lg text-xl text-white/40 transition-all duration-300 hover:text-white hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] md:text-2xl"
         >
-          {client}
-        </span>
+          {client.name}
+        </a>
       ))}
     </>
   );

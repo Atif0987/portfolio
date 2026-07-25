@@ -1,9 +1,18 @@
+"use client";
+
+import React from "react";
+import { useScrollFadeIn } from "../../hooks/useScrollFadeIn";
 import { stats } from "../../data/stats";
 import Container from "../shared/container";
 
 export default function ImpactStats() {
+  const { ref, isVisible } = useScrollFadeIn();
+
   return (
-    <section className="border-y border-outline-variant/10 bg-surface-container-lowest py-section-padding-md">
+    <section
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`scroll-fade-in ${isVisible ? "visible" : ""} border-y border-outline-variant/10 bg-surface-container-lowest py-section-padding-md`}
+    >
       <Container>
         <h3 className="mb-12 text-center font-label-sm text-xs uppercase tracking-widest text-primary">
           Global Impact & Delivery
