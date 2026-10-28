@@ -2,12 +2,14 @@ import Navbar from "./components/layout/navbar";
 import Footer from "./components/layout/footer";
 
 import Hero from "./components/sections/hero";
-import ClientsMarquee from "./components/sections/clients-marquee";
-import ImpactStats from "./components/sections/impact-stats";
-import TechStack from "./components/sections/tech-stack";
+import Clients from "./components/sections/clients";
+import About from "./components/sections/about";
+import Services from "./components/sections/services";
+import ProcessSection from "./components/sections/process";
 import FeaturedProjects from "./components/sections/featured-projects";
 import ExperienceSection from "./components/sections/experience";
-import ProcessSection from "./components/sections/process";
+import Toolkit from "./components/sections/toolkit";
+import Testimonials from "./components/sections/testimonials";
 import ContactSection from "./components/sections/contact";
 
 export default function HomePage() {
@@ -15,14 +17,16 @@ export default function HomePage() {
     <>
       <Navbar />
 
-      <main className="relative">
+      <main id="main" className="relative">
         <Hero />
-        <ClientsMarquee />
-        <ImpactStats />
-        <TechStack />
+        <Clients />
+        <About />
+        <Services />
+        <ProcessSection />
         <FeaturedProjects />
         <ExperienceSection />
-        <ProcessSection />
+        <Toolkit />
+        <Testimonials />
         <ContactSection />
       </main>
 

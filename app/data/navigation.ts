@@ -1,6 +1,8 @@
+// Root-relative so the links also work from case study pages.
 export const navigation = [
-  { title: "Projects", href: "#projects" },
-  { title: "Experience", href: "#experience" },
-  { title: "Skills", href: "#skills" },
-  { title: "Contact", href: "#contact" },
+  { title: "About", href: "/#about" },
+  { title: "Services", href: "/#services" },
+  { title: "Work", href: "/#work" },
+  { title: "Experience", href: "/#experience" },
+  { title: "Contact", href: "/#contact" },
 ];

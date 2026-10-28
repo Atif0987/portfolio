@@ -1,81 +1,82 @@
-"use client";
-
-import React from "react";
 import Link from "next/link";
 
-import { siteConfig } from "../../data/site";
-import { useScrollFadeIn } from "../../hooks/useScrollFadeIn";
+import { isContactFormEnabled } from "../../data/contact";
+import { getWhatsAppUrl, siteConfig } from "../../data/site";
 import Container from "../shared/container";
-import MaterialIcon from "../ui/material-icon";
+import Reveal from "../shared/reveal";
+import { CalendarIcon, MailIcon, WhatsAppIcon } from "../ui/icons";
+import ContactForm from "./contact-form";
+
+const secondaryBtn =
+  "flex h-[54px] items-center justify-center gap-2.5 rounded-full border border-cta-line px-7 font-medium transition hover:bg-white/10";
 
 export default function ContactSection() {
-  const { ref, isVisible } = useScrollFadeIn();
-
-  const bookingUrl = siteConfig.calendly || siteConfig.linkedin;
+  const whatsappUrl = getWhatsAppUrl();
+  const showForm = isContactFormEnabled();
 
   return (
-    <section
-      ref={ref as React.RefObject<HTMLElement>}
-      id="contact"
-      className={`scroll-fade-in ${isVisible ? "visible" : ""} py-section-padding-lg`}
-    >
-      <Container>
-        <div className="premium-shadow flex flex-col items-center gap-12 rounded-xl border border-outline-variant/10 bg-surface-container-lowest p-8 text-center md:flex-row md:p-12 md:text-left">
-          <div className="flex-1">
-            <h2 className="mb-4 font-display-lg text-4xl text-white">
+    <section id="contact" aria-labelledby="contact-heading" className="pt-6 pb-14 lg:pt-10 lg:pb-20">
+      <Container className="flex flex-col gap-4">
+        <Reveal className="flex flex-col gap-8 rounded-3xl bg-cta px-6 py-10 text-cta-ink sm:px-10 sm:py-14 lg:flex-row lg:items-center lg:justify-between lg:rounded-[32px] lg:px-16 lg:py-[72px]">
+          <div className="flex flex-col gap-3.5 lg:max-w-[560px]">
+            <h2
+              id="contact-heading"
+              className="font-display text-[40px] leading-[1.02] text-balance sm:text-5xl lg:text-[64px]"
+            >
               Let&apos;s build something extraordinary.
             </h2>
-            <p className="mb-8 font-body-lg text-on-surface-variant">
-              Currently based in Pakistan and open to remote engineering roles
-              or high-impact consulting.
+            <p className="text-base opacity-85 sm:text-[17px]">
+              Open to remote engineering roles and high-impact Shopify
+              consulting.
             </p>
+          </div>
 
-            <div className="flex flex-col justify-center gap-4 sm:flex-row md:justify-start">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:max-w-[440px] lg:flex-col">
+            <Link
+              href={siteConfig.calendly}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-track="book_call"
+              className="flex h-[54px] items-center justify-center gap-2.5 rounded-full bg-cta-btn px-7 font-medium text-cta-btn-ink transition hover:opacity-90"
+            >
+              <CalendarIcon />
+              Book a 30-min call
+            </Link>
+            {whatsappUrl && (
               <Link
-                href={`mailto:${siteConfig.email}`}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 font-label-sm text-sm text-white transition-all hover:brightness-110"
-              >
-                <MaterialIcon name="mail" />
-                Send Email
-              </Link>
-              <Link
-                href={bookingUrl}
+                href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-outline-variant px-8 py-4 font-label-sm text-sm text-white transition-all hover:bg-surface-container"
+                data-track="whatsapp"
+                className={secondaryBtn}
               >
-                <MaterialIcon name="calendar_month" />
-                Book a Call
+                <WhatsAppIcon />
+                Chat on WhatsApp
               </Link>
-            </div>
+            )}
+            <Link href={`mailto:${siteConfig.email}`} data-track="email" className={secondaryBtn}>
+              <MailIcon />
+              {siteConfig.email}
+            </Link>
           </div>
+        </Reveal>
 
-          <div className="w-full max-w-xs shrink-0 space-y-4">
-            <div className="flex items-center gap-4 rounded-lg border border-outline-variant/10 bg-surface-container/50 p-4">
-              <MaterialIcon name="location_on" className="text-primary" />
-              <div className="text-left">
-                <div className="text-[10px] font-bold tracking-wider text-on-surface-variant uppercase">
-                  Location
-                </div>
-                <div className="font-body-md text-sm text-white">
-                  {siteConfig.location}
-                </div>
-              </div>
+        {showForm && (
+          <Reveal className="grid gap-6 pt-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:gap-12 lg:pt-10">
+            <div className="flex flex-col gap-3">
+              <span className="font-mono text-[11px] tracking-[0.14em] text-dim uppercase md:text-xs">
+                Prefer writing?
+              </span>
+              <h3 className="font-display text-[30px] leading-tight md:text-4xl">
+                Tell me about your project.
+              </h3>
+              <p className="text-muted">
+                Share a few details and I&apos;ll reply by email with next steps.
+              </p>
             </div>
-
-            <div className="flex items-center gap-4 rounded-lg border border-outline-variant/10 bg-surface-container/50 p-4">
-              <MaterialIcon name="language" className="text-primary" />
-              <div className="text-left">
-                <div className="text-[10px] font-bold tracking-wider text-on-surface-variant uppercase">
-                  Timezone
-                </div>
-                <div className="font-body-md text-sm text-white">
-                  {siteConfig.timezone}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+            <ContactForm />
+          </Reveal>
+        )}
       </Container>
     </section>
   );

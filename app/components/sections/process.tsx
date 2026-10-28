@@ -1,50 +1,35 @@
-"use client";
-
-import type { RefObject } from "react";
-import { useScrollFadeIn } from "../../hooks/useScrollFadeIn";
 import { processSteps } from "../../data/process";
 import Container from "../shared/container";
-import MaterialIcon from "../ui/material-icon";
+import Reveal from "../shared/reveal";
+import SectionHeader from "../ui/section-header";
 
 export default function ProcessSection() {
-  const { ref, isVisible } = useScrollFadeIn();
-
   return (
-    <section
-      ref={ref as RefObject<HTMLElement>}
-      className={`scroll-fade-in ${isVisible ? "visible" : ""} relative overflow-hidden bg-black py-section-padding-lg`}
-    >
-      <Container className="relative z-10">
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 font-display-lg text-4xl text-white">
-            The Process
-          </h2>
-          <p className="font-body-md text-on-surface-variant">
-            A structured approach to building scalable products.
-          </p>
-        </div>
+    <section aria-labelledby="process-heading" className="py-10 lg:py-16">
+      <Container>
+        <Reveal>
+          <SectionHeader
+            id="process-heading"
+            eyebrow="03 / How I work"
+            title="From discovery to launch — and beyond."
+          />
 
-        <div className="relative grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-6">
-          {processSteps.map((step) => (
-            <div
-              key={step.step}
-              className="group relative overflow-hidden rounded-xl border border-outline-variant/10 bg-surface-container-lowest p-6 transition-all duration-300 hover:border-primary/50"
-            >
-              <div className="pointer-events-none absolute -top-4 -right-4 font-display-lg text-6xl text-white/5 transition-colors group-hover:text-primary/10">
-                {step.step}
-              </div>
-
-              <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <MaterialIcon name={step.icon} className="text-xl" />
-              </div>
-
-              <h4 className="mb-2 font-bold text-white">{step.title}</h4>
-              <p className="text-xs leading-relaxed text-on-surface-variant">
-                {step.description}
-              </p>
-            </div>
-          ))}
-        </div>
+          {/* Swipeable row on phones, six-column grid on desktop */}
+          <ol className="-mx-4 flex snap-x snap-mandatory scroll-px-4 gap-3 sm:scroll-px-6 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:-mx-6 sm:px-6 lg:mx-0 lg:grid lg:grid-cols-6 lg:gap-4 lg:overflow-visible lg:px-0">
+            {processSteps.map((step, index) => (
+              <li
+                key={step.title}
+                className="flex w-[42%] shrink-0 snap-start flex-col gap-2 border-t-2 border-line-strong pt-4 first:border-accent-solid sm:w-[30%] lg:w-auto"
+              >
+                <span className="font-mono text-xs text-accent">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className="text-lg font-semibold">{step.title}</span>
+                <span className="text-sm leading-relaxed text-muted">{step.description}</span>
+              </li>
+            ))}
+          </ol>
+        </Reveal>
       </Container>
     </section>
   );

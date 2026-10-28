@@ -2,17 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export function useScrollFadeIn() {
-  const ref = useRef<HTMLElement | null>(null);
+export function useScrollFadeIn<T extends HTMLElement = HTMLElement>() {
+  const ref = useRef<T | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (typeof IntersectionObserver === "undefined") {
-      // Progressive enhancement fallback: SSR or old browsers — show content immediately
-      setIsVisible(true);
-      return;
-    }
-
     const el = ref.current;
     if (!el) return;
 
@@ -23,7 +17,7 @@ export function useScrollFadeIn() {
           observer.unobserve(el); // fire once only — no re-animation on scroll back
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     );
 
     observer.observe(el);
