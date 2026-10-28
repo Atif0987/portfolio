@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from "react";
@@ -7,6 +8,8 @@ import Container from "../shared/container";
 
 export default function ImpactStats() {
   const { ref, isVisible } = useScrollFadeIn();
+
+  const statsList = Object.values(stats);
 
   return (
     <section
@@ -19,11 +22,13 @@ export default function ImpactStats() {
         </h3>
 
         <div className="grid grid-cols-2 gap-8 text-center md:grid-cols-5">
-          {stats.map((stat, index) => (
+          {statsList.map((stat, index) => (
             <div
               key={stat.label}
               className={`space-y-1 ${
-                index === stats.length - 1 ? "col-span-2 md:col-span-1" : ""
+                index === statsList.length - 1
+                  ? "col-span-2 md:col-span-1"
+                  : ""
               }`}
             >
               <div className="font-display-lg text-3xl text-white">

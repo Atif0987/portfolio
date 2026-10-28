@@ -32,7 +32,7 @@ export default function TechStack() {
               className="premium-shadow flex flex-col items-center gap-4 rounded-xl border border-outline-variant/20 bg-surface-container-low p-6 text-center"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <MaterialIcon name={skill.icon} className="text-3xl" />
+                <MaterialIcon name="code" className="text-3xl" />
               </div>
               <div className="font-headline-md text-lg text-white">
                 {skill.name}
